@@ -1,0 +1,27 @@
+
+
+###
+GET http://localhost:5000/api/user-info
+
+###
+POST http://localhost:5000/api/user-info
+Content-Type: application/json
+
+{
+    "name": "bim",
+    "surname": "Bam",
+    "age": 9,
+    "email": "dantys@gmail.com"
+}
+###
+###
+PUT http://localhost:3000/api/user-info/64579fff62a563693797db96
+Content-Type: application/json
+
+
+{
+    "name": "bim",
+    "surname": "Bam",
+    "age": 9,
+    "email": "galva@gmail.com"
+}
