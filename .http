@@ -1,8 +1,8 @@
 
-
+//get users
 ###
 GET http://localhost:5000/api/user-info
-
+//post users
 ###
 POST http://localhost:5000/api/user-info
 Content-Type: application/json
@@ -13,15 +13,19 @@ Content-Type: application/json
     "age": 9,
     "email": "dantys@gmail.com"
 }
+
+
+//editing users info 
 ###
-###
-PUT http://localhost:3000/api/user-info/64579fff62a563693797db96
+PUT http://localhost:3000/api/user-info/645907c5f12dfd9889efcd28
 Content-Type: application/json
 
 
 {
-    "name": "bim",
-    "surname": "Bam",
+    "name": "Dovydas",
+    "surname": "Venckunas",
     "age": 9,
-    "email": "galva@gmail.com"
+    "email": "chromelegs@gmail.com"
 }
+###
+DELETE http://localhost:3000/api/user-info/645a44ef90444c76bc0630d6

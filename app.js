@@ -67,4 +67,25 @@ app.put("/api/user-info/:id", async (req, res) => {
   }
 });
 
+//delete a user
+
+app.delete("/api/user-info/:id", async (req, res) => {
+  try {
+    const userId = req.params.id;
+
+    const deletedUser = await User.findByIdAndDelete(userId);
+    console.log("Deleted user:", deletedUser);
+
+    if (!deletedUser) {
+      console.log("User not found!");
+      return res.status(404).json({ message: "User not found!" });
+    }
+
+    res.json({ message: "User deleted successfully" });
+  } catch (error) {
+    console.log(error);
+    res.json({ message: "Error..." });
+  }
+});
+
 app.listen(PORT, () => console.log("Server is running on port:" + PORT));
